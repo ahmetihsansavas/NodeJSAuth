@@ -1,0 +1,31 @@
+GET http://localhost:3500/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiSmltIiwiaWF0IjoxNjI0MzkwNzU0fQ.Yl4zAvUSs-ZZeQSjiP9puPQxJ7iowXHoDhemIwNZTpU
+###
+
+POST http://localhost:3000/api/user/register
+Content-Type: application/json
+
+{
+    "name":"John",
+    "password":"123456",
+    "email":"john@gmail.com"
+}
+
+###
+
+POST http://localhost:3000/api/user/login
+Content-Type: application/json
+
+{
+    "email":"john@gmail.com",
+    "password":"123456"
+}
+
+###
+
+GET http://localhost:3000/api/posts
+auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGQyZGUzZTNlNGQ2MzBhZmNhYzAxYWIiLCJpYXQiOjE2MjQ0MzU4MjJ9.bCdXpgkDYHw2ajr3ZlZCXinkGCkp0icWkQMW1r397DI
+
+###
+POST http://localhost:3000/api/user/loggout
+auth-token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGQyZGUzZTNlNGQ2MzBhZmNhYzAxYWIiLCJpYXQiOjE2MjQ0MzY0NTN9.5Bd9EefaouvyBIkWKo5YdziIyYj4uIZ5MM1gYtLSjzE
